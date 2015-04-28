@@ -1460,5 +1460,27 @@
       </properties>
     </profile>
 
+    <profile>
+      <id>force_http_core_version</id>
+      <properties>
+        <httpclient.version>4.3.6</httpclient.version>
+        <httpcore.version>4.3.3</httpcore.version>
+      </properties>
+      <dependencyManagement>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${httpcore.version}</version>
+          </dependency>
+        </dependencies>
+      </dependencyManagement>
+    </profile>
+
   </profiles>
 </project>
